@@ -67,3 +67,14 @@ ENV PATH=/plant_early_release/augustus-3.2.1/bin/:$PATH
 
 ENTRYPOINT ["python3", "/usr/bin/BUSCO_plants.py"]
 CMD ["-h"]
+
+# Building image
+# docker build -t"=ubuntu/busco:2.0" .
+# Runing the executables of the image without any arguments
+# docker run ubuntu/busco:2.0
+# Running the image with arguments
+# First example dataset
+# sudo docker run --rm -v $(pwd):/home/upendra_35/BUSCO/plant_early_release/sample_data -w /home/upendra_35/BUSCO/plant_early_release/sample_data ubuntu/busco:2.0 -in target.fa -l example -m genome -o SAMPLE_example -f
+# Plantae dataset
+# sudo docker run --rm -v $(pwd):/home/upendra_35/BUSCO/plant_early_release/sample_data -w /home/upendra_35/BUSCO/plant_early_release/sample_data ubuntu/busco:2.0 -in target.fa -l plantae -m genome -o SAMPLE_plantae -f
+
